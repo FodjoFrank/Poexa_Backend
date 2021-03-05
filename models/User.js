@@ -20,11 +20,11 @@ const UserSchema = mongoose.Schema({
     },
     occupation:{
         type:String,
-        default:"student"
+        default:null
     },
     bio:{
         type:String,
-        default:"Passionated about poem writting"
+        default:null
     },
     gender:{
         type: String,

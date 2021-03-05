@@ -80,7 +80,7 @@ router.post(
       }
   })
 
-  //update pooem:private
+  //update poem:private
   router.put('/:id',Auth,async(req,res)=>{
    try {
     let poem = await Poems.findByIdAndUpdate(req.params.id,req.body,{
@@ -88,7 +88,7 @@ router.post(
       runValidators:true
     })
     if(!poem){
-      return res.status(400).json({msg:"Po such Poem to be edited"})
+      return res.status(400).json({msg:"No such Poem to be edited"})
 
     }
     return res.status(200).json({poem})
